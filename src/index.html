@@ -1,19 +1,533 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Desenvolvedor Cadastra</title>
+    <link rel="stylesheet" href="main.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Desenvolvedor Cadastra</title>
-  <link rel="stylesheet" href="main.css" />
-</head>
+  <!-- header -->
+  <body>
+    <header class="header">
+      <div class="header-container">
+        <a href="#">
+          <img src="./img/cadastra-logo.png" alt="" />
+        </a>
+        <a href="#">
+          <img src="./img/shopping-bag.png" alt="" />
+        </a>
+      </div>
+    </header>
 
-<body>
+    <!-- main body -->
+    <section class="body">
+      <div class="body-container">
+        <div class="title-container">
+          <div class="clothing-type-container">
+            <h2 class="clothing-type">Blusas</h2>
+          </div>
+          <div class="title-menu">
+            <div class="menu">
+              <button>Filtrar</button>
+            </div>
+            <div class="menu">
+              <button>Ordenar</button>
+            </div>
+          </div>
+          <div class="order-container">
+            <select name="" id="" class="order-by">
+              <option value="" disabled selected hidden>Ordenar por:</option>
+              <option value="recent">Mais recentes</option>
+              <option value="lower-price">Menor preço</option>
+              <option value="higher-price">Maior preço</option>
+            </select>
+          </div>
+        </div>
+        <div class="content-container">
+          <div class="filter-container">
+            <div class="filter-wrapper-item">
+              <h2 class="filter-title">CORES</h2>
+              <div class="filter-item">
+                <input type="radio" id="radio-yellow" name="radio-color" />
+                <label for="radio-yellow">Amarelo</label>
+              </div>
+              <div class="filter-item">
+                <input type="radio" id="radio-blue" name="radio-color" />
+                <label for="radio-blue">Azul</label>
+              </div>
+              <div class="filter-item">
+                <input type="radio" id="radio-white" name="radio-color" />
+                <label for="radio-white">Branco</label>
+              </div>
+              <div class="filter-item">
+                <input type="radio" id="radio-gray" name="radio-color" />
+                <label for="radio-gray">Cinza</label>
+              </div>
+              <div class="filter-item">
+                <input type="radio" id="radio-orange" name="radio-color" />
+                <label for="radio-orange">Laranja</label>
+              </div>
+              <!-- todo: add button show color -->
+              <p class="show-color hidden">Ver todas as cores \/</p>
+              <div class="">
+                <div class="filter-item">
+                  <input type="radio" id="radio-green" name="radio-color" />
+                  <label for="radio-green">Verde</label>
+                </div>
+                <div class="filter-item">
+                  <input type="radio" id="radio-red" name="radio-color" />
+                  <label for="radio-red">Vermelho</label>
+                </div>
+                <div class="filter-item">
+                  <input type="radio" id="radio-black" name="radio-color" />
+                  <label for="radio-black">Preto</label>
+                </div>
+                <div class="filter-item">
+                  <input type="radio" id="radio-pink" name="radio-color" />
+                  <label for="radio-pink">Rosa</label>
+                </div>
+                <div class="filter-item">
+                  <input type="radio" id="radio-wine" name="radio-color" />
+                  <label for="radio-wine">Vinho</label>
+                </div>
+              </div>
+            </div>
+            <div class="filter-wrapper-item">
+              <h2 class="filter-title">TAMANHOS</h2>
+              <div class="radio-size-container">
+                <div>
+                  <input type="radio" id="radio-p" name="radio-size" />
+                  <label for="radio-p">P</label>
+                </div>
+                <div class="selected">
+                  <input type="radio" id="radio-m" name="radio-size" />
+                  <label for="radio-m">M</label>
+                </div>
+                <div>
+                  <input type="radio" id="radio-g" name="radio-size" />
+                  <label for="radio-g">G</label>
+                </div>
+                <div>
+                  <input type="radio" id="radio-gg" name="radio-size" />
+                  <label for="radio-gg">GG</label>
+                </div>
+                <div>
+                  <input type="radio" id="radio-u" name="radio-size" />
+                  <label for="radio-u">U</label>
+                </div>
+                <div>
+                  <input type="radio" id="radio-36" name="radio-size" />
+                  <label for="radio-36">36</label>
+                </div>
+                <div>
+                  <input type="radio" id="radio-38" name="radio-size" />
+                  <label for="radio-38">38</label>
+                </div>
+                <div>
+                  <input type="radio" id="radio-40" name="radio-size" />
+                  <label for="radio-40">40</label>
+                </div>
+                <div>
+                  <input type="radio" id="radio-42" name="radio-size" />
+                  <label for="radio-42">42</label>
+                </div>
+                <div>
+                  <input type="radio" id="radio-44" name="radio-size" />
+                  <label for="radio-44">44</label>
+                </div>
+                <div>
+                  <input type="radio" id="radio-46" name="radio-size" />
+                  <label for="radio-46">46</label>
+                </div>
+              </div>
+            </div>
+            <div class="filter-wrapper-item">
+              <h2 class="filter-title">FAIXA DE PREÇO</h2>
+              <div class="filter-item">
+                <input type="radio" id="radio-price-0" name="radio-price" />
+                <label for="radio-price-0">de R$0 até R$50</label>
+              </div>
+              <div class="filter-item">
+                <input type="radio" id="radio-price-51" name="radio-price" />
+                <label for="radio-price-51">de R$51 até R$150</label>
+              </div>
+              <div class="filter-item">
+                <input type="radio" id="radio-price-151" name="radio-price" />
+                <label for="radio-price-151">de R$151 até R$300</label>
+              </div>
+              <div class="filter-item">
+                <input type="radio" id="radio-price-301" name="radio-price" />
+                <label for="radio-price-301">de R$301 até R$500</label>
+              </div>
+              <div class="filter-item">
+                <input type="radio" id="radio-price-500" name="radio-price" />
+                <label for="radio-price-500">a partir de R$500</label>
+              </div>
+            </div>
+          </div>
+          <div class="products-container">
+            <div class="products-wrapper">
+              <div class="product-card">
+                <div class="product">
+                  <!-- todo: take data from the database -->
+                  <img class="product-thumbnail" src="./img/img_2.png" alt="" />
+                  <h2 class="product-title">CAMISETA MESCLA</h2>
+                  <p class="product-price">R$ 28,00</p>
+                  <p class="product-installment">até 3x de R$9,33</p>
+                  <button class="product-button">COMPRAR</button>
+                </div>
+              </div>
+              <div class="product-card">
+                <div class="product">
+                  <img class="product-thumbnail" src="./img/img_3.png" alt="" />
+                  <h2 class="product-title">CAMISETA MESCLA</h2>
+                  <p class="product-price">R$ 28,00</p>
+                  <p class="product-installment">até 3x de R$9,33</p>
+                  <button class="product-button">COMPRAR</button>
+                </div>
+              </div>
+              <div class="product-card">
+                <div class="product">
+                  <img class="product-thumbnail" src="./img/img_4.png" alt="" />
+                  <h2 class="product-title">CAMISETA MESCLA</h2>
+                  <p class="product-price">R$ 28,00</p>
+                  <p class="product-installment">até 3x de R$9,33</p>
+                  <button class="product-button">COMPRAR</button>
+                </div>
+              </div>
+              <div class="product-card">
+                <div class="product">
+                  <img class="product-thumbnail" src="./img/img_5.png" alt="" />
+                  <h2 class="product-title">CAMISETA MESCLA</h2>
+                  <p class="product-price">R$ 28,00</p>
+                  <p class="product-installment">até 3x de R$9,33</p>
+                  <button class="product-button">COMPRAR</button>
+                </div>
+              </div>
+              <div class="product-card">
+                <div class="product">
+                  <img class="product-thumbnail" src="./img/img_6.png" alt="" />
+                  <h2 class="product-title">CAMISETA MESCLA</h2>
+                  <p class="product-price">R$ 28,00</p>
+                  <p class="product-installment">até 3x de R$9,33</p>
+                  <button class="product-button">COMPRAR</button>
+                </div>
+              </div>
+              <div class="product-card">
+                <div class="product">
+                  <img class="product-thumbnail" src="./img/img_7.png" alt="" />
+                  <h2 class="product-title">CAMISETA MESCLA</h2>
+                  <p class="product-price">R$ 28,00</p>
+                  <p class="product-installment">até 3x de R$9,33</p>
+                  <button class="product-button">COMPRAR</button>
+                </div>
+              </div>
+              <div class="product-card">
+                <div class="product">
+                  <img class="product-thumbnail" src="./img/img_8.png" alt="" />
+                  <h2 class="product-title">CAMISETA MESCLA</h2>
+                  <p class="product-price">R$ 28,00</p>
+                  <p class="product-installment">até 3x de R$9,33</p>
+                  <button class="product-button">COMPRAR</button>
+                </div>
+              </div>
+              <div class="product-card">
+                <div class="product">
+                  <img class="product-thumbnail" src="./img/img_9.png" alt="" />
+                  <h2 class="product-title">CAMISETA MESCLA</h2>
+                  <p class="product-price">R$ 28,00</p>
+                  <p class="product-installment">até 3x de R$9,33</p>
+                  <button class="product-button">COMPRAR</button>
+                </div>
+              </div>
+              <div class="product-card">
+                <div class="product">
+                  <img
+                    class="product-thumbnail"
+                    src="./img/img_10.png"
+                    alt=""
+                  />
+                  <h2 class="product-title">CAMISETA MESCLA</h2>
+                  <p class="product-price">R$ 28,00</p>
+                  <p class="product-installment">até 3x de R$9,33</p>
+                  <button class="product-button">COMPRAR</button>
+                </div>
+              </div>
+            </div>
+            <!-- todo: remove button if theres no more products -->
+            <!-- todo: renomear classes, melhorar classes -->
+            <div class="load-products-button">
+              <button>CARREGAR MAIS</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-</body>
-<h1>Desafio Cadastra</h1>
+    <!-- overlay menu -->
+    <section class="overlay-menu hidden">
+      <div class="overlay-wrapper-menu">
+        <div class="overlay-menu-header">
+          <h1 class="overlay-menu-title">FILTRAR</h1>
+          <button class="overlay-close-button">X</button>
+        </div>
+        <div class="overlay-filter-items">
+          <h2 class="overlay-filter-title">CORES</h2>
+          <button class="overlay-filter-button">\/</button>
+          <div class="overlay-filter-list">
+            <div>
+              <input
+                type="radio"
+                id="overlay-radio-yellow"
+                name="overlay-radio-color"
+              />
+              <label for="overlay-radio-yellow">Amarelo</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                id="overlay-radio-blue"
+                name="overlay-radio-color"
+              />
+              <label for="overlay-radio-blue">Azul</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                id="overlay-radio-white"
+                name="overlay-radio-color"
+              />
+              <label for="overlay-radio-white">Branco</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                id="overlay-radio-gray"
+                name="overlay-radio-color"
+              />
+              <label for="overlay-radio-gray">Cinza</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                id="overlay-radio-orange"
+                name="overlay-radio-color"
+              />
+              <label for="overlay-radio-orange">Laranja</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                id="overlay-radio-green"
+                name="overlay-radio-color"
+              />
+              <label for="overlay-radio-green">Verde</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                id="overlay-radio-red"
+                name="overlay-radio-color"
+              />
+              <label for="overlay-radio-red">Vermelho</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                id="overlay-radio-black"
+                name="overlay-radio-color"
+              />
+              <label for="overlay-radio-black">Preto</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                id="overlay-radio-pink"
+                name="overlay-radio-color"
+              />
+              <label for="overlay-radio-pink">Rosa</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                id="overlay-radio-wine"
+                name="overlay-radio-color"
+              />
+              <label for="overlay-radio-wine">Vinho</label>
+            </div>
+          </div>
+        </div>
+        <div class="overlay-filter-items">
+          <h2 class="overlay-filter-title">TAMANHOS</h2>
+          <button class="overlay-filter-button">\/</button>
+          <div class="overlay-filter-sizes">
+            <div>
+              <input
+                type="radio"
+                id="overlay-radio-p"
+                name="overlay-radio-size"
+              />
+              <label for="overlay-radio-p">P</label>
+            </div>
+            <div class="selected">
+              <input
+                type="radio"
+                id="overlay-radio-m"
+                name="overlay-radio-size"
+              />
+              <label for="overlay-radio-m">M</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                id="overlay-radio-g"
+                name="overlay-radio-size"
+              />
+              <label for="overlay-radio-g">G</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                id="overlay-radio-gg"
+                name="overlay-radio-size"
+              />
+              <label for="overlay-radio-gg">GG</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                id="overlay-radio-u"
+                name="overlay-radio-size"
+              />
+              <label for="overlay-radio-u">U</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                id="overlay-radio-36"
+                name="overlay-radio-size"
+              />
+              <label for="overlay-radio-36">36</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                id="overlay-radio-38"
+                name="overlay-radio-size"
+              />
+              <label for="overlay-radio-38">38</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                id="overlay-radio-40"
+                name="overlay-radio-size"
+              />
+              <label for="overlay-radio-40">40</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                id="overlay-radio-42"
+                name="overlay-radio-size"
+              />
+              <label for="overlay-radio-42">42</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                id="overlay-radio-44"
+                name="overlay-radio-size"
+              />
+              <label for="overlay-radio-44">44</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                id="overlay-radio-46"
+                name="overlay-radio-size"
+              />
+              <label for="overlay-radio-46">46</label>
+            </div>
+          </div>
+        </div>
+        <div class="overlay-filter-items">
+          <h2 class="overlay-filter-title">FAIXA DE PREÇO</h2>
+          <button class="overlay-filter-button">\/</button>
+          <div class="overlay-filter-list">
+            <div>
+              <input
+                type="radio"
+                id="overlay-radio-price-0"
+                name="overlay-radio-price"
+              />
+              <label for="overlay-radio-price-0">de R$0 até R$50</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                id="overlay-radio-price-51"
+                name="overlay-radio-price"
+              />
+              <label for="overlay-radio-price-51">de R$51 até R$150</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                id="overlay-radio-price-151"
+                name="overlay-radio-price"
+              />
+              <label for="overlay-radio-price-151">de R$151 até R$300</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                id="overlay-radio-price-301"
+                name="overlay-radio-price"
+              />
+              <label for="overlay-radio-price-301">de R$301 até R$500</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                id="overlay-radio-price-500"
+                name="overlay-radio-price"
+              />
+              <label for="overlay-radio-price-500">a partir de R$500</label>
+            </div>
+          </div>
+        </div>
+        <div class="overlay-filter-buttons-container">
+          <button class="overlay-apply-button">APLICAR</button>
+          <button class="overlay-clear-button">LIMPAR</button>
+        </div>
+      </div>
+      <div class="overlay-wrapper-menu">
+        <div class="overlay-menu-header">
+          <h1 class="overlay-menu-title">ORDENAR</h1>
+          <button class="overlay-close-button">X</button>
+        </div>
+        <div class="overlay-order-items">
+          <div>
+            <h2>Mais recente</h2>
+          </div>
+          <div>
+            <h2>Maior preço</h2>
+          </div>
+          <div>
+            <h2>Menor preço</h2>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<script src="bundle.js"></script>
+    <!-- footer -->
+    <footer class="footer">
+      <p class="footer-text">CADASTRA: IMPLANTAÇÃO DE E-COMMERCE VTEX</p>
+    </footer>
+  </body>
 
+  <script src="bundle.js"></script>
 </html>

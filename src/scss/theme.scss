@@ -1,0 +1,21 @@
+// import Open Sans
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+:root {
+  // colors
+  --primary: #fb953e;
+  --black: #000000;
+  --gray1: #00000080;
+  --gray2: #666666;
+  --gray3: #333333;
+  --gray4: #c7c7c7;
+  --white: #ffffff;
+
+  // font family
+  --main-font: "Open Sans";
+
+  // screen size
+  --mobile: "768px";
+  --tablet: "1024px";
+  --desktop: "1400px";
+}
