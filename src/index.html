@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Desenvolvedor Cadastra</title>
     <link rel="stylesheet" href="main.css" />
+    <link
+      rel="shortcut icon"
+      href="https://cadastra.com/img/site/favicon-light.png"
+      type="image/x-icon"
+    />
   </head>
 
   <!-- header -->
@@ -168,98 +173,9 @@
             </div>
           </div>
           <div class="products-container">
-            <div class="products-wrapper">
-              <div class="product-card">
-                <div class="product">
-                  <!-- todo: take data from the database -->
-                  <img class="product-thumbnail" src="./img/img_2.png" alt="" />
-                  <h2 class="product-title">CAMISETA MESCLA</h2>
-                  <p class="product-price">R$ 28,00</p>
-                  <p class="product-installment">até 3x de R$9,33</p>
-                  <button class="product-button">COMPRAR</button>
-                </div>
-              </div>
-              <div class="product-card">
-                <div class="product">
-                  <img class="product-thumbnail" src="./img/img_3.png" alt="" />
-                  <h2 class="product-title">CAMISETA MESCLA</h2>
-                  <p class="product-price">R$ 28,00</p>
-                  <p class="product-installment">até 3x de R$9,33</p>
-                  <button class="product-button">COMPRAR</button>
-                </div>
-              </div>
-              <div class="product-card">
-                <div class="product">
-                  <img class="product-thumbnail" src="./img/img_4.png" alt="" />
-                  <h2 class="product-title">CAMISETA MESCLA</h2>
-                  <p class="product-price">R$ 28,00</p>
-                  <p class="product-installment">até 3x de R$9,33</p>
-                  <button class="product-button">COMPRAR</button>
-                </div>
-              </div>
-              <div class="product-card">
-                <div class="product">
-                  <img class="product-thumbnail" src="./img/img_5.png" alt="" />
-                  <h2 class="product-title">CAMISETA MESCLA</h2>
-                  <p class="product-price">R$ 28,00</p>
-                  <p class="product-installment">até 3x de R$9,33</p>
-                  <button class="product-button">COMPRAR</button>
-                </div>
-              </div>
-              <div class="product-card">
-                <div class="product">
-                  <img class="product-thumbnail" src="./img/img_6.png" alt="" />
-                  <h2 class="product-title">CAMISETA MESCLA</h2>
-                  <p class="product-price">R$ 28,00</p>
-                  <p class="product-installment">até 3x de R$9,33</p>
-                  <button class="product-button">COMPRAR</button>
-                </div>
-              </div>
-              <div class="product-card">
-                <div class="product">
-                  <img class="product-thumbnail" src="./img/img_7.png" alt="" />
-                  <h2 class="product-title">CAMISETA MESCLA</h2>
-                  <p class="product-price">R$ 28,00</p>
-                  <p class="product-installment">até 3x de R$9,33</p>
-                  <button class="product-button">COMPRAR</button>
-                </div>
-              </div>
-              <div class="product-card">
-                <div class="product">
-                  <img class="product-thumbnail" src="./img/img_8.png" alt="" />
-                  <h2 class="product-title">CAMISETA MESCLA</h2>
-                  <p class="product-price">R$ 28,00</p>
-                  <p class="product-installment">até 3x de R$9,33</p>
-                  <button class="product-button">COMPRAR</button>
-                </div>
-              </div>
-              <div class="product-card">
-                <div class="product">
-                  <img class="product-thumbnail" src="./img/img_9.png" alt="" />
-                  <h2 class="product-title">CAMISETA MESCLA</h2>
-                  <p class="product-price">R$ 28,00</p>
-                  <p class="product-installment">até 3x de R$9,33</p>
-                  <button class="product-button">COMPRAR</button>
-                </div>
-              </div>
-              <div class="product-card">
-                <div class="product">
-                  <img
-                    class="product-thumbnail"
-                    src="./img/img_10.png"
-                    alt=""
-                  />
-                  <h2 class="product-title">CAMISETA MESCLA</h2>
-                  <p class="product-price">R$ 28,00</p>
-                  <p class="product-installment">até 3x de R$9,33</p>
-                  <button class="product-button">COMPRAR</button>
-                </div>
-              </div>
-            </div>
-            <!-- todo: remove button if theres no more products -->
-            <!-- todo: renomear classes, melhorar classes -->
-            <div class="load-products-button">
-              <button>CARREGAR MAIS</button>
+            <div class="products-wrapper" id="product-wrapper"></div>
+            <div class="load-products-button" id="load-products-button">
+              <button onclick="">CARREGAR MAIS</button>
             </div>
           </div>
         </div>
