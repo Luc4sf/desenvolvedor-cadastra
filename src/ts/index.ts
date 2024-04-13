@@ -1,18 +1,24 @@
 import { Product } from "./Product";
 import { getProducts } from "./api";
-import { addProducts } from "./createProducts";
-
-// const serverUrl = "http://localhost:5000";
-const loadProductsButton = document.getElementById("load-products-button");
+import { startCart } from "./cart";
+import { startProducts } from "./startProducts";
+import { startFilter } from "./startFilter";
+import { startOrder } from "./startOrder";
 
 async function main() {
-  // console.log(serverUrl);
+  const products = (await getProducts()) as Product[];
 
-  const data: Product[] | undefined = await getProducts();
-  const products: Product[] = data!;
+  // Start product functions and listeners
+  startProducts(products);
 
-  addProducts(products);
-  loadProductsButton!.addEventListener("click", () => addProducts(products));
+  // Start filter functions and listeners
+  startFilter();
+
+  // Start order functions and listeners
+  startOrder();
+
+  // Start cart functions and listeners
+  startCart();
 }
 
 document.addEventListener("DOMContentLoaded", main);

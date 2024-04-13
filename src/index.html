@@ -20,8 +20,9 @@
         <a href="#">
           <img src="./img/cadastra-logo.png" alt="" />
         </a>
-        <a href="#">
+        <a id="cart-button" href="#">
           <img src="./img/shopping-bag.png" alt="" />
+          <span id="cart-count">0</span>
         </a>
       </div>
     </header>
@@ -34,20 +35,22 @@
             <h2 class="clothing-type">Blusas</h2>
           </div>
           <div class="title-menu">
-            <div class="menu">
-              <button>Filtrar</button>
+            <div class="menu" id>
+              <button id="filter-products-button">Filtrar</button>
             </div>
             <div class="menu">
-              <button>Ordenar</button>
+              <button id="order-products-button">Ordenar</button>
             </div>
           </div>
-          <div class="order-container">
-            <select name="" id="" class="order-by">
-              <option value="" disabled selected hidden>Ordenar por:</option>
-              <option value="recent">Mais recentes</option>
-              <option value="lower-price">Menor preço</option>
-              <option value="higher-price">Maior preço</option>
-            </select>
+          <div id="order-container" class="order-container">
+            <div class="selected-option">
+              <span id="selected-option"> Ordenar por: </span>
+            </div>
+            <div id="order-options" class="order-options">
+              <div value="1" class="option">Mais recentes</div>
+              <div value="2" class="option">Menor preço</div>
+              <div value="3" class="option">Maior preço</div>
+            </div>
           </div>
         </div>
         <div class="content-container">
@@ -55,127 +58,258 @@
             <div class="filter-wrapper-item">
               <h2 class="filter-title">CORES</h2>
               <div class="filter-item">
-                <input type="radio" id="radio-yellow" name="radio-color" />
-                <label for="radio-yellow">Amarelo</label>
+                <input
+                  type="checkbox"
+                  id="checkbox-yellow"
+                  name="checkbox-color"
+                  value="Amarelo"
+                />
+                <label for="checkbox-yellow">Amarelo</label>
               </div>
               <div class="filter-item">
-                <input type="radio" id="radio-blue" name="radio-color" />
-                <label for="radio-blue">Azul</label>
+                <input
+                  type="checkbox"
+                  id="checkbox-blue"
+                  name="checkbox-color"
+                  value="Azul"
+                />
+                <label for="checkbox-blue">Azul</label>
               </div>
               <div class="filter-item">
-                <input type="radio" id="radio-white" name="radio-color" />
-                <label for="radio-white">Branco</label>
+                <input
+                  type="checkbox"
+                  id="checkbox-white"
+                  name="checkbox-color"
+                  value="Branco"
+                />
+                <label for="checkbox-white">Branco</label>
               </div>
               <div class="filter-item">
-                <input type="radio" id="radio-gray" name="radio-color" />
-                <label for="radio-gray">Cinza</label>
+                <input
+                  type="checkbox"
+                  id="checkbox-gray"
+                  name="checkbox-color"
+                  value="Cinza"
+                />
+                <label for="checkbox-gray">Cinza</label>
               </div>
               <div class="filter-item">
-                <input type="radio" id="radio-orange" name="radio-color" />
-                <label for="radio-orange">Laranja</label>
+                <input
+                  type="checkbox"
+                  id="checkbox-orange"
+                  name="checkbox-color"
+                  value="Laranja"
+                />
+                <label for="checkbox-orange">Laranja</label>
               </div>
-              <!-- todo: add button show color -->
-              <p class="show-color hidden">Ver todas as cores \/</p>
-              <div class="">
+              <div id="show-colors">
+                <p class="show-colors">Ver todas as cores</p>
+              </div>
+              <div id="hidden-colors" class="hidden">
                 <div class="filter-item">
-                  <input type="radio" id="radio-green" name="radio-color" />
-                  <label for="radio-green">Verde</label>
+                  <input
+                    type="checkbox"
+                    id="checkbox-green"
+                    name="checkbox-color"
+                    value="Verde"
+                  />
+                  <label for="checkbox-green">Verde</label>
                 </div>
                 <div class="filter-item">
-                  <input type="radio" id="radio-red" name="radio-color" />
-                  <label for="radio-red">Vermelho</label>
+                  <input
+                    type="checkbox"
+                    id="checkbox-red"
+                    name="checkbox-color"
+                    value="Vermelho"
+                  />
+                  <label for="checkbox-red">Vermelho</label>
                 </div>
                 <div class="filter-item">
-                  <input type="radio" id="radio-black" name="radio-color" />
-                  <label for="radio-black">Preto</label>
+                  <input
+                    type="checkbox"
+                    id="checkbox-black"
+                    name="checkbox-color"
+                    value="Preto"
+                  />
+                  <label for="checkbox-black">Preto</label>
                 </div>
                 <div class="filter-item">
-                  <input type="radio" id="radio-pink" name="radio-color" />
-                  <label for="radio-pink">Rosa</label>
+                  <input
+                    type="checkbox"
+                    id="checkbox-pink"
+                    name="checkbox-color"
+                    value="Rosa"
+                  />
+                  <label for="checkbox-pink">Rosa</label>
                 </div>
                 <div class="filter-item">
-                  <input type="radio" id="radio-wine" name="radio-color" />
-                  <label for="radio-wine">Vinho</label>
+                  <input
+                    type="checkbox"
+                    id="checkbox-wine"
+                    name="checkbox-color"
+                    value="Vinho"
+                  />
+                  <label for="checkbox-wine">Vinho</label>
                 </div>
               </div>
             </div>
             <div class="filter-wrapper-item">
               <h2 class="filter-title">TAMANHOS</h2>
-              <div class="radio-size-container">
+              <div class="checkbox-size-container">
                 <div>
-                  <input type="radio" id="radio-p" name="radio-size" />
-                  <label for="radio-p">P</label>
-                </div>
-                <div class="selected">
-                  <input type="radio" id="radio-m" name="radio-size" />
-                  <label for="radio-m">M</label>
-                </div>
-                <div>
-                  <input type="radio" id="radio-g" name="radio-size" />
-                  <label for="radio-g">G</label>
+                  <input
+                    type="checkbox"
+                    id="checkbox-p"
+                    name="checkbox-size"
+                    value="P"
+                  />
+                  <label for="checkbox-p">P</label>
                 </div>
                 <div>
-                  <input type="radio" id="radio-gg" name="radio-size" />
-                  <label for="radio-gg">GG</label>
+                  <input
+                    type="checkbox"
+                    id="checkbox-m"
+                    name="checkbox-size"
+                    value="M"
+                  />
+                  <label for="checkbox-m">M</label>
                 </div>
                 <div>
-                  <input type="radio" id="radio-u" name="radio-size" />
-                  <label for="radio-u">U</label>
+                  <input
+                    type="checkbox"
+                    id="checkbox-g"
+                    name="checkbox-size"
+                    value="G"
+                  />
+                  <label for="checkbox-g">G</label>
                 </div>
                 <div>
-                  <input type="radio" id="radio-36" name="radio-size" />
-                  <label for="radio-36">36</label>
+                  <input
+                    type="checkbox"
+                    id="checkbox-gg"
+                    name="checkbox-size"
+                    value="GG"
+                  />
+                  <label for="checkbox-gg">GG</label>
                 </div>
                 <div>
-                  <input type="radio" id="radio-38" name="radio-size" />
-                  <label for="radio-38">38</label>
+                  <input
+                    type="checkbox"
+                    id="checkbox-u"
+                    name="checkbox-size"
+                    value="U"
+                  />
+                  <label for="checkbox-u">U</label>
                 </div>
                 <div>
-                  <input type="radio" id="radio-40" name="radio-size" />
-                  <label for="radio-40">40</label>
+                  <input
+                    type="checkbox"
+                    id="checkbox-36"
+                    name="checkbox-size"
+                    value="36"
+                  />
+                  <label for="checkbox-36">36</label>
                 </div>
                 <div>
-                  <input type="radio" id="radio-42" name="radio-size" />
-                  <label for="radio-42">42</label>
+                  <input
+                    type="checkbox"
+                    id="checkbox-38"
+                    name="checkbox-size"
+                    value="38"
+                  />
+                  <label for="checkbox-38">38</label>
                 </div>
                 <div>
-                  <input type="radio" id="radio-44" name="radio-size" />
-                  <label for="radio-44">44</label>
+                  <input
+                    type="checkbox"
+                    id="checkbox-40"
+                    name="checkbox-size"
+                    value="40"
+                  />
+                  <label for="checkbox-40">40</label>
                 </div>
                 <div>
-                  <input type="radio" id="radio-46" name="radio-size" />
-                  <label for="radio-46">46</label>
+                  <input
+                    type="checkbox"
+                    id="checkbox-42"
+                    name="checkbox-size"
+                    value="42"
+                  />
+                  <label for="checkbox-42">42</label>
+                </div>
+                <div>
+                  <input
+                    type="checkbox"
+                    id="checkbox-44"
+                    name="checkbox-size"
+                    value="44"
+                  />
+                  <label for="checkbox-44">44</label>
+                </div>
+                <div>
+                  <input
+                    type="checkbox"
+                    id="checkbox-46"
+                    name="checkbox-size"
+                    value="46"
+                  />
+                  <label for="checkbox-46">46</label>
                 </div>
               </div>
             </div>
             <div class="filter-wrapper-item">
               <h2 class="filter-title">FAIXA DE PREÇO</h2>
               <div class="filter-item">
-                <input type="radio" id="radio-price-0" name="radio-price" />
+                <input
+                  type="radio"
+                  id="radio-price-0"
+                  name="radio-price"
+                  value="0"
+                />
                 <label for="radio-price-0">de R$0 até R$50</label>
               </div>
               <div class="filter-item">
-                <input type="radio" id="radio-price-51" name="radio-price" />
-                <label for="radio-price-51">de R$51 até R$150</label>
+                <input
+                  type="radio"
+                  id="radio-price-1"
+                  name="radio-price"
+                  value="1"
+                />
+                <label for="radio-price-1">de R$51 até R$150</label>
               </div>
               <div class="filter-item">
-                <input type="radio" id="radio-price-151" name="radio-price" />
-                <label for="radio-price-151">de R$151 até R$300</label>
+                <input
+                  type="radio"
+                  id="radio-price-2"
+                  name="radio-price"
+                  value="2"
+                />
+                <label for="radio-price-2">de R$151 até R$300</label>
               </div>
               <div class="filter-item">
-                <input type="radio" id="radio-price-301" name="radio-price" />
-                <label for="radio-price-301">de R$301 até R$500</label>
+                <input
+                  type="radio"
+                  id="radio-price-3"
+                  name="radio-price"
+                  value="3"
+                />
+                <label for="radio-price-3">de R$301 até R$500</label>
               </div>
               <div class="filter-item">
-                <input type="radio" id="radio-price-500" name="radio-price" />
-                <label for="radio-price-500">a partir de R$500</label>
+                <input
+                  type="radio"
+                  id="radio-price-4"
+                  name="radio-price"
+                  value="4"
+                />
+                <label for="radio-price-4">a partir de R$500</label>
               </div>
             </div>
           </div>
           <div class="products-container">
             <div class="products-wrapper" id="product-wrapper"></div>
-            <div class="load-products-button" id="load-products-button">
-              <button onclick="">CARREGAR MAIS</button>
+            <div class="load-products-button">
+              <button id="load-products-button">CARREGAR MAIS</button>
             </div>
           </div>
         </div>
@@ -183,201 +317,226 @@
     </section>
 
     <!-- overlay menu -->
-    <section class="overlay-menu hidden">
-      <div class="overlay-wrapper-menu">
+    <section id="overlay-menu" class="overlay-menu hidden">
+      <div id="overlay-menu-filter" class="overlay-wrapper-menu hidden">
         <div class="overlay-menu-header">
           <h1 class="overlay-menu-title">FILTRAR</h1>
-          <button class="overlay-close-button">X</button>
+          <button
+            id="close-filter-button"
+            class="overlay-close-button"
+          ></button>
         </div>
         <div class="overlay-filter-items">
           <h2 class="overlay-filter-title">CORES</h2>
-          <button class="overlay-filter-button">\/</button>
+          <button class="overlay-filter-button"></button>
           <div class="overlay-filter-list">
             <div>
               <input
-                type="radio"
-                id="overlay-radio-yellow"
-                name="overlay-radio-color"
+                type="checkbox"
+                id="overlay-checkbox-yellow"
+                name="overlay-checkbox-color"
+                value="Amarelo"
               />
-              <label for="overlay-radio-yellow">Amarelo</label>
+              <label for="overlay-checkbox-yellow">Amarelo</label>
             </div>
             <div>
               <input
-                type="radio"
-                id="overlay-radio-blue"
-                name="overlay-radio-color"
+                type="checkbox"
+                id="overlay-checkbox-blue"
+                name="overlay-checkbox-color"
+                value="Azul"
               />
-              <label for="overlay-radio-blue">Azul</label>
+              <label for="overlay-checkbox-blue">Azul</label>
             </div>
             <div>
               <input
-                type="radio"
-                id="overlay-radio-white"
-                name="overlay-radio-color"
+                type="checkbox"
+                id="overlay-checkbox-white"
+                name="overlay-checkbox-color"
+                value="Branco"
               />
-              <label for="overlay-radio-white">Branco</label>
+              <label for="overlay-checkbox-white">Branco</label>
             </div>
             <div>
               <input
-                type="radio"
-                id="overlay-radio-gray"
-                name="overlay-radio-color"
+                type="checkbox"
+                id="overlay-checkbox-gray"
+                name="overlay-checkbox-color"
+                value="Cinza"
               />
-              <label for="overlay-radio-gray">Cinza</label>
+              <label for="overlay-checkbox-gray">Cinza</label>
             </div>
             <div>
               <input
-                type="radio"
-                id="overlay-radio-orange"
-                name="overlay-radio-color"
+                type="checkbox"
+                id="overlay-checkbox-orange"
+                name="overlay-checkbox-color"
+                value="Laranja"
               />
-              <label for="overlay-radio-orange">Laranja</label>
+              <label for="overlay-checkbox-orange">Laranja</label>
             </div>
             <div>
               <input
-                type="radio"
-                id="overlay-radio-green"
-                name="overlay-radio-color"
+                type="checkbox"
+                id="overlay-checkbox-green"
+                name="overlay-checkbox-color"
+                value="Verde"
               />
-              <label for="overlay-radio-green">Verde</label>
+              <label for="overlay-checkbox-green">Verde</label>
             </div>
             <div>
               <input
-                type="radio"
-                id="overlay-radio-red"
-                name="overlay-radio-color"
+                type="checkbox"
+                id="overlay-checkbox-red"
+                name="overlay-checkbox-color"
+                value="Vermelho"
               />
-              <label for="overlay-radio-red">Vermelho</label>
+              <label for="overlay-checkbox-red">Vermelho</label>
             </div>
             <div>
               <input
-                type="radio"
-                id="overlay-radio-black"
-                name="overlay-radio-color"
+                type="checkbox"
+                id="overlay-checkbox-black"
+                name="overlay-checkbox-color"
+                value="Preto"
               />
-              <label for="overlay-radio-black">Preto</label>
+              <label for="overlay-checkbox-black">Preto</label>
             </div>
             <div>
               <input
-                type="radio"
-                id="overlay-radio-pink"
-                name="overlay-radio-color"
+                type="checkbox"
+                id="overlay-checkbox-pink"
+                name="overlay-checkbox-color"
+                value="Rosa"
               />
-              <label for="overlay-radio-pink">Rosa</label>
+              <label for="overlay-checkbox-pink">Rosa</label>
             </div>
             <div>
               <input
-                type="radio"
-                id="overlay-radio-wine"
-                name="overlay-radio-color"
+                type="checkbox"
+                id="overlay-checkbox-wine"
+                name="overlay-checkbox-color"
+                value="Vinho"
               />
-              <label for="overlay-radio-wine">Vinho</label>
+              <label for="overlay-checkbox-wine">Vinho</label>
             </div>
           </div>
         </div>
         <div class="overlay-filter-items">
           <h2 class="overlay-filter-title">TAMANHOS</h2>
-          <button class="overlay-filter-button">\/</button>
+          <button class="overlay-filter-button"></button>
           <div class="overlay-filter-sizes">
             <div>
               <input
-                type="radio"
-                id="overlay-radio-p"
-                name="overlay-radio-size"
+                type="checkbox"
+                id="overlay-checkbox-p"
+                name="overlay-checkbox-size"
+                value="P"
               />
-              <label for="overlay-radio-p">P</label>
-            </div>
-            <div class="selected">
-              <input
-                type="radio"
-                id="overlay-radio-m"
-                name="overlay-radio-size"
-              />
-              <label for="overlay-radio-m">M</label>
+              <label for="overlay-checkbox-p">P</label>
             </div>
             <div>
               <input
-                type="radio"
-                id="overlay-radio-g"
-                name="overlay-radio-size"
+                type="checkbox"
+                id="overlay-checkbox-m"
+                name="overlay-checkbox-size"
+                value="M"
               />
-              <label for="overlay-radio-g">G</label>
+              <label for="overlay-checkbox-m">M</label>
             </div>
             <div>
               <input
-                type="radio"
-                id="overlay-radio-gg"
-                name="overlay-radio-size"
+                type="checkbox"
+                id="overlay-checkbox-g"
+                name="overlay-checkbox-size"
+                value="G"
               />
-              <label for="overlay-radio-gg">GG</label>
+              <label for="overlay-checkbox-g">G</label>
             </div>
             <div>
               <input
-                type="radio"
-                id="overlay-radio-u"
-                name="overlay-radio-size"
+                type="checkbox"
+                id="overlay-checkbox-gg"
+                name="overlay-checkbox-size"
+                value="GG"
               />
-              <label for="overlay-radio-u">U</label>
+              <label for="overlay-checkbox-gg">GG</label>
             </div>
             <div>
               <input
-                type="radio"
-                id="overlay-radio-36"
-                name="overlay-radio-size"
+                type="checkbox"
+                id="overlay-checkbox-u"
+                name="overlay-checkbox-size"
+                value="U"
               />
-              <label for="overlay-radio-36">36</label>
+              <label for="overlay-checkbox-u">U</label>
             </div>
             <div>
               <input
-                type="radio"
-                id="overlay-radio-38"
-                name="overlay-radio-size"
+                type="checkbox"
+                id="overlay-checkbox-36"
+                name="overlay-checkbox-size"
+                value="36"
               />
-              <label for="overlay-radio-38">38</label>
+              <label for="overlay-checkbox-36">36</label>
             </div>
             <div>
               <input
-                type="radio"
-                id="overlay-radio-40"
-                name="overlay-radio-size"
+                type="checkbox"
+                id="overlay-checkbox-38"
+                name="overlay-checkbox-size"
+                value="38"
               />
-              <label for="overlay-radio-40">40</label>
+              <label for="overlay-checkbox-38">38</label>
             </div>
             <div>
               <input
-                type="radio"
-                id="overlay-radio-42"
-                name="overlay-radio-size"
+                type="checkbox"
+                id="overlay-checkbox-40"
+                name="overlay-checkbox-size"
+                value="40"
               />
-              <label for="overlay-radio-42">42</label>
+              <label for="overlay-checkbox-40">40</label>
             </div>
             <div>
               <input
-                type="radio"
-                id="overlay-radio-44"
-                name="overlay-radio-size"
+                type="checkbox"
+                id="overlay-checkbox-42"
+                name="overlay-checkbox-size"
+                value="42"
               />
-              <label for="overlay-radio-44">44</label>
+              <label for="overlay-checkbox-42">42</label>
             </div>
             <div>
               <input
-                type="radio"
-                id="overlay-radio-46"
-                name="overlay-radio-size"
+                type="checkbox"
+                id="overlay-checkbox-44"
+                name="overlay-checkbox-size"
+                value="44"
               />
-              <label for="overlay-radio-46">46</label>
+              <label for="overlay-checkbox-44">44</label>
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                id="overlay-checkbox-46"
+                name="overlay-checkbox-size"
+                value="46"
+              />
+              <label for="overlay-checkbox-46">46</label>
             </div>
           </div>
         </div>
         <div class="overlay-filter-items">
           <h2 class="overlay-filter-title">FAIXA DE PREÇO</h2>
-          <button class="overlay-filter-button">\/</button>
+          <button class="overlay-filter-button"></button>
           <div class="overlay-filter-list">
             <div>
               <input
                 type="radio"
                 id="overlay-radio-price-0"
                 name="overlay-radio-price"
+                value="0"
               />
               <label for="overlay-radio-price-0">de R$0 até R$50</label>
             </div>
@@ -386,6 +545,7 @@
                 type="radio"
                 id="overlay-radio-price-51"
                 name="overlay-radio-price"
+                value="1"
               />
               <label for="overlay-radio-price-51">de R$51 até R$150</label>
             </div>
@@ -394,6 +554,7 @@
                 type="radio"
                 id="overlay-radio-price-151"
                 name="overlay-radio-price"
+                value="2"
               />
               <label for="overlay-radio-price-151">de R$151 até R$300</label>
             </div>
@@ -402,6 +563,7 @@
                 type="radio"
                 id="overlay-radio-price-301"
                 name="overlay-radio-price"
+                value="3"
               />
               <label for="overlay-radio-price-301">de R$301 até R$500</label>
             </div>
@@ -410,29 +572,34 @@
                 type="radio"
                 id="overlay-radio-price-500"
                 name="overlay-radio-price"
+                value="4"
               />
               <label for="overlay-radio-price-500">a partir de R$500</label>
             </div>
           </div>
         </div>
         <div class="overlay-filter-buttons-container">
-          <button class="overlay-apply-button">APLICAR</button>
-          <button class="overlay-clear-button">LIMPAR</button>
+          <button id="overlay-apply-button" class="overlay-apply-button">
+            APLICAR
+          </button>
+          <button id="overlay-clear-button" class="overlay-clear-button">
+            LIMPAR
+          </button>
         </div>
       </div>
-      <div class="overlay-wrapper-menu">
+      <div id="overlay-menu-order" class="overlay-wrapper-menu hidden">
         <div class="overlay-menu-header">
           <h1 class="overlay-menu-title">ORDENAR</h1>
-          <button class="overlay-close-button">X</button>
+          <button id="close-order-button" class="overlay-close-button"></button>
         </div>
         <div class="overlay-order-items">
-          <div>
+          <div id="overlay-order-recent">
             <h2>Mais recente</h2>
           </div>
-          <div>
+          <div id="overlay-order-higher">
             <h2>Maior preço</h2>
           </div>
-          <div>
+          <div id="overlay-order-lower">
             <h2>Menor preço</h2>
           </div>
         </div>
