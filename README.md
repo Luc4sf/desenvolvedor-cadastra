@@ -17,7 +17,7 @@ Uma ver que o comando é dado ele irá levantar 2 servidores, sendo eles:
 
 ### Objetivo
 
-Implementação de um site de E-commerce de roupas, utilizando HTML5, CSS3 e Typescript, sem frameworks. O layout foi provido e se no [figma](https://www.figma.com/file/Z5RCG3Ewzwm7XIPuhMUsBZ/Desafio-Cadastra?type=design&node-id=0%3A1&mode=design&t=A0G2fRjMSrcQjchw-1).
+Implementação de um site de E-commerce de roupas, utilizando HTML5, CSS3 e Typescript, sem frameworks. O layout foi provido e se encontra no [figma](https://www.figma.com/file/Z5RCG3Ewzwm7XIPuhMUsBZ/Desafio-Cadastra?type=design&node-id=0%3A1&mode=design&t=A0G2fRjMSrcQjchw-1).
 O site deve ser responsivo e possuir as seguintes funcionalidades:
 
 - Requisição a API para obter os produtos;
